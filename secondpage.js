@@ -1,5 +1,5 @@
 const newsentences = [
-    "> Hi, please type smtg.",
+    "> Hi, please fill up the details.",
 ];
 const topContainer = document.getElementById("typewriter-text-top");
 
