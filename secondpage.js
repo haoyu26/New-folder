@@ -1,5 +1,5 @@
 const newsentences = [
-    "> Hi, please fill up the details.",
+    "> Please key in the details below.",
 ];
 const topContainer = document.getElementById("typewriter-text-top");
 
@@ -17,7 +17,7 @@ function showSentence(newsentence, targetContainer) {
                 targetContainer.innerHTML += '<span class="cursor"></span>';
             }
         }
-    }, 100); // Adjust typing speed here
+    }, 50); // Adjust typing speed here
 }
 
 
@@ -25,7 +25,7 @@ function show() {
     showSentence(newsentences[0], topContainer);
     setTimeout(function() {
         showUserCredentialForm();
-    }, newsentences[0].length * 100 + 500); // Wait for 0.5 seconds after typing the first sentence
+    }, newsentences[0].length * 50 + 500); // Wait for 0.5 seconds after typing the first sentence
 }
 
 function showUserCredentialForm() {
@@ -37,8 +37,11 @@ function showUserCredentialForm() {
     const column = document.createElement("div");
     column.classList.add("column");
     // Add inline styles to change font color and background color
-    column.style.color = "white"; // Change font color to white
-    column.style.backgroundColor = "blue"; // Change background color to blue
+    column.style.color = "green"; // Change font color to white
+    column.style.fontFamily = "VT323";
+    column.style.textShadow = "0px 0px 10px green, 0px 0px 5px green";
+    column.style.fontSize= "30px";
+    column.style.backgroundColor = "#111111"; // Change background color to blue
     column.style.display = "flex"; // Use flexbox
     column.style.flexDirection = "column"; // Stack items vertically
     column.style.alignItems = "flex-start"; // Align items to the start of the cross axis
